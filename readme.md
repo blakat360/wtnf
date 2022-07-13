@@ -3,3 +3,7 @@ Have you ever wanted to use a nerdfont glyph and didn't want to use your browser
 
 # installation
 clone the repo and the `make install`. Life is short
+
+## dependencies
+- xsel
+- dmenu
