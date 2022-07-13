@@ -1,0 +1,15 @@
+#!/bin/bash
+
+FILE="glyphs.txt"
+DIR="/usr/share/wtnf/"
+USE=""
+
+if [[ -f "$FILE" ]]; then
+  USE="$FILE"
+else 
+  if [[ -f "$DIR$FILE" ]]; then
+    USE="$DIR$FILE"
+  fi
+fi
+
+dmenu <"$USE" | sed "s/.* - //" | xsel -ib
